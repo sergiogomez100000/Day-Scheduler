@@ -12,8 +12,11 @@ currentDay.textContent = today;
 var currentHour=moment().format("HH");//got military hour
 currentHour= currentHour;
 console.log(currentHour); //logd in military number
+console.log(typeof currentHour);
 var hour9 =document.querySelector("#hour-9");
 var hour9 = 9
+console.log(hour9);
+console.log(typeof hour9);
 
 //WHEN I click into a timeblock//THEN I can enter an event
 //WHEN I click the save button for that timeblock
