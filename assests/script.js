@@ -34,12 +34,19 @@ var timeframe = [hour9, hour10, hour11, hour12, hour13, hour14, hour15, hour16, 
 
 // creates function to colorcode timeframes
 function colorCode(){
+	//for loop to go thru each timeframe index
 	for(i= 0;i<timeframe.length;i++){
+		//if currenthour value is equal to timeframe value of specific index
 	if(currentHour==timeframe[i])
+		//add present class to timeframe variable at specific index
 	timeframe[i].addclass(present);
+	//if currenthour value is less than the timeframe value at specific index
 	if(currentHour<timeframe[i])
+	//add future class to timeframe var at specific index 
 	timeframe[i].addclass(future);
+	//otherwise
 	else	
+	//add past class to timeframe var at specific index
 	timeframe[i].addclass(past);
 	
 
@@ -52,23 +59,30 @@ function colorCode(){
 
 //WHEN I click into a timeblock//THEN I can enter an event
 //WHEN I click the save button for that timeblock
-var savebutton = document.getElementsByClassName("btn saveBtn")
-var description= document.getElementsByClassName("description")
+// variables for html classes
+var savebutton = document.querySelectorAll(".btn saveBtn")
+var description= document.querySelectorAll(".description")
+//create function to add description to timeframe
 function addDescription(){
 savebutton.addEventListener("click",function(){
     preventDefault();
-    if (description.value.length < 1) return;
-    description.innerHTML +=description.value;
-
-	// Clear input
-	description.value = '';
-
+	//if the input of description is nothing (less than 1) return
+    if (description.length < 1) return;
+	//the text of description var is equal to the input of description
+    description.innerHTML =description.value;
 	// Save the list to localStorage
-	localStorage.setItem('description', description.innerHTML);
+	window.localStorage.setItem('description', JSON.stringify(description.innerHTML));
+	// function for each description
+	description.forEach(function() {
+        var inits = score.initials;
+         var score = score.score;
+         description.innerText = description.value
+         timeframe.append(description.innerText);
+	
+     
 
 
-})}
+})})}
 //THEN the text for that event is saved in local storage
 //WHEN I refresh the page
 //THEN the saved events persist
-//Global Variables using moment script link
