@@ -31,23 +31,25 @@ var hour17 =document.querySelector("#hour-17");//assign variable to hour-17 id
 var hour17 = 17//assigns numerical value to variable hour17
 //sets an array with all different containers as value for timeframe variable
 var timeframe = [hour9, hour10, hour11, hour12, hour13, hour14, hour15, hour16, hour17]
-
-// creates function to colorcode timeframes
-function colorCode(){
+console.log(timeframe)
+colorCode();
+//creates function to colorcode timeframes
+function colorCode(timeframe){
 	//for loop to go thru each timeframe index
-	for(i= 0;i<timeframe.length;i++){
+	for(i=0;i<timeframe;i++){
 		//if currenthour value is equal to timeframe value of specific index
-	if(currentHour==timeframe[i])
+	if(currentHour===timeframe[i])
 		//add present class to timeframe variable at specific index
-	timeframe[i].addclass(present);
+	timeframe.addclass("present");
 	//if currenthour value is less than the timeframe value at specific index
-	if(currentHour<timeframe[i])
+	 else if(currentHour<timeframe[i])
 	//add future class to timeframe var at specific index 
-	timeframe[i].addclass(future);
+	timeframe[i].addclass("future");
 	//otherwise
 	else	
 	//add past class to timeframe var at specific index
-	timeframe[i].addclass(past);
+	timeframe[i].addclass("past");
+
 	
 
 }}
@@ -60,29 +62,17 @@ function colorCode(){
 //WHEN I click into a timeblock//THEN I can enter an event
 //WHEN I click the save button for that timeblock
 // variables for html classes
-var savebutton = document.querySelectorAll(".btn saveBtn")
-var description= document.querySelectorAll(".description")
+var savebutton = document.querySelectorAll(".saveBtn");
+var description= document.querySelectorAll(".description");
 //create function to add description to timeframe
-function addDescription(){
-savebutton.addEventListener("click",function(){
-    preventDefault();
-	//if the input of description is nothing (less than 1) return
-    if (description.length < 1) return;
-	//the text of description var is equal to the input of description
-    description.innerHTML =description.value;
-	// Save the list to localStorage
-	window.localStorage.setItem('description', JSON.stringify(description.innerHTML));
-	// function for each description
-	description.forEach(function() {
-        var inits = score.initials;
-         var score = score.score;
-         description.innerText = description.value
-         timeframe.append(description.innerText);
-	
-     
+savebutton.addEventListener("click",function(e){
+	var description= document.querySelectorAll(".description").textContent;
+	//prevents refresh
+   e.preventDefault();
+   //saves local storage key which titled description, 
+   localStorage.setItem("description", description);
 
-
-})})}
+});
 //THEN the text for that event is saved in local storage
 //WHEN I refresh the page
 //THEN the saved events persist
