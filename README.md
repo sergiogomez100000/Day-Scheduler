@@ -9,7 +9,7 @@ Anyone who wants to be more organized can use my application. It is easily acces
 
 # Images
 <img src="assests\images\Screenshot (18).png">
-![Screen Shot](assests/images/Screenshot (18).png)
+<img src="assests\images\Screenshot (19).png">
 
 # Resources
 Had a lot of help with my tutor Alexa Stefankiewicz, as well as some classmates have helped me understrand the logic of siblings and parents such as Emma Lysyk. 
