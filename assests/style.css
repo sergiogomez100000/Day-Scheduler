@@ -18,11 +18,13 @@ body {
     background-color: transparent;
     color: black;
     border-radius: 0;
-    border-bottom: 10px solid black;
+    /* border-bottom: 10px solid black; */
+    padding: 10px;
   }
   
   .description{
     white-space: pre-wrap;
+    /* border: #000000 solid 1px; */
   }
   
   .time-block{
@@ -32,7 +34,7 @@ body {
   
   .row {
     white-space: pre-wrap;
-    height: 80px;
+    /* height: 80px; */
     border-top: 1px solid white;;
   }
   
