@@ -8,8 +8,8 @@ You can view my application here (https://sergiogomez100000.github.io/Day-Schedu
 Anyone who wants to be more organized can use my application. It is easily accessible so anyone can add whatever they wish to any time frame presented.
 
 # Images
-<img src="assests\images\Day-Scheduler.png">
-<img src="assests\images\Day-Scheduler-Storage.png">
+<img src="assets\images\Day-Scheduler.png">
+<img src="assets\images\Day-Scheduler-Storage.png">
 
 # Resources
 Had a lot of help with my tutor Alexa Stefankiewicz, as well as some classmates have helped me understand the logic of siblings and parents such as Emma Lysyk.
